@@ -1,9 +1,7 @@
-create database gearmuscle;
+create database IF NOT EXISTS gearmuscle;
 use gearmuscle;
-drop database gearmuscle;
 
-drop table usuario;
-CREATE TABLE usuario(
+CREATE TABLE IF NOT EXISTS usuario(
 ID_usuario integer primary key not null,
 peso decimal(3,2),
 email varchar(50),
@@ -15,8 +13,7 @@ meta boolean,
 metaPeso decimal(3,2)
 );
 
-drop table exercicio;
-create table exercicio(
+CREATE TABLE IF NOT EXISTS exercicio(
 video varchar(1000),
 descricao varchar(1000),
 musculo varchar(1000),
@@ -24,8 +21,7 @@ dificuldade varchar(1000),
 equipamento varchar(1000)
 );
 
-drop table treino;
-create table treino(
+CREATE TABLE IF NOT EXISTS treino(
 objetivo boolean,
 equipamento varchar(500),
 musculo varchar(500),
